@@ -1,0 +1,80 @@
+// ваш код
+.header {
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+  }
+
+  &__burger {
+    grid-column: 1 span;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 18px;
+    overflow: hidden;
+
+    .line {
+      background-color: #000;
+      width: 100%;
+      height: 1.8px;
+      flex-shrink: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: #000;
+        left: 0;
+        width: 100%;
+        height: 1.8px;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        bottom: 0;
+      }
+    }
+  }
+
+  &__logo {
+    grid-column: 7 / 3 span;
+  }
+
+  &__right {
+    grid-column: 11 / 5 span;
+
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__tel {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    color: #000;
+    font-weight: 500;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 10px;
+    color: #194CA0;
+
+    a {
+      text-decoration: underline;
+      color: inherit;
+    }
+  }
+}
