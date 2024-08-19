@@ -39,11 +39,11 @@
     <div class="container">
       <div class="nav__container">
         <ul class="nav__left list-reset">
-          <li class="nav__item">
+          <li class="nav__item nav__item--drop" data-nav="watches">
             <div class="nav__icon">
               <img src="./img/icons/clock.svg" alt="" />
             </div>
-            <a href="#" class="nav__link">Швейцарские часы</a>
+            <span class="nav__link">Швейцарские часы</span>
             <div class="nav__arrow">
               <svg
                 width="7"
@@ -61,17 +61,49 @@
               </svg>
             </div>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--drop" data-nav="jewelry">
             <div class="nav__icon">
               <img src="./img/icons/rings.svg" alt="" />
             </div>
-            <a href="#" class="nav__link">Ювелирные изделия</a>
+            <span class="nav__link">Ювелирные изделия</span>
+            <div class="nav__arrow">
+              <svg
+                width="7"
+                height="5"
+                viewBox="0 0 7 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.15775 0.150122L3.50775 2.844L0.85775 0.150122C0.66075 -0.0498779 0.34375 -0.0498779 0.14775 0.150122C-0.04925 0.350122 -0.04925 0.674612 0.14775 0.874612L3.14775 3.93584C3.34175 4.13584 3.65775 4.13686 3.85475 3.9389L3.85775 3.93584L6.85675 0.874612C7.05375 0.674612 7.05375 0.350122 6.85675 0.150122C6.66175 -0.0498779 6.34375 -0.0498779 6.14675 0.150122H6.15775Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--drop" data-nav="accessories">
             <div class="nav__icon">
               <img src="./img/icons/bag.svg" alt="" />
             </div>
-            <a href="#" class="nav__link">Аксессуары</a>
+            <span class="nav__link">Аксессуары</span>
+            <div class="nav__arrow">
+              <svg
+                width="7"
+                height="5"
+                viewBox="0 0 7 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.15775 0.150122L3.50775 2.844L0.85775 0.150122C0.66075 -0.0498779 0.34375 -0.0498779 0.14775 0.150122C-0.04925 0.350122 -0.04925 0.674612 0.14775 0.874612L3.14775 3.93584C3.34175 4.13584 3.65775 4.13686 3.85475 3.9389L3.85775 3.93584L6.85675 0.874612C7.05375 0.674612 7.05375 0.350122 6.85675 0.150122C6.66175 -0.0498779 6.34375 -0.0498779 6.14675 0.150122H6.15775Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
           </li>
         </ul>
 
@@ -88,7 +120,6 @@
         </ul>
       </div>
     </div>
-
     @include('./h-menu.html')
   </nav>
 </header>

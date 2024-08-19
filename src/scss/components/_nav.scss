@@ -22,10 +22,27 @@
     }
   }
 
+  &__left {
+    gap: 0;
+  }
+
   &__item {
     display: flex;
     align-items: center;
     gap: 12px;
+    position: relative;
+
+    &:not(:last-child) {
+      padding-right: 20px;
+
+      @media (max-width: 1000px) {
+        padding-right: 13px;
+      }
+    }
+
+    &--drop {
+      cursor: pointer;
+    }
 
     @media (max-width: 1000px) {
       gap: 10px;

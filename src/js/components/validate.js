@@ -55,10 +55,6 @@ const ctaRules = [
     ruleSelector: '#form-file',
     rules: [
       {
-        rule: 'minFilesCount',
-        value: 1,
-      },
-      {
         rule: 'files',
         value: {
           files: {
@@ -70,14 +66,37 @@ const ctaRules = [
     ]
   }
 ]
+const modalForm = document.querySelector('.modal__form')
+const ctaForm = document.querySelector('.cta__form')
 
-const afterForm = () => {
-  alert('Спасибо за заявку! Свяжемся с вами в ближайшее время!')
-};
-if(document.querySelector('.cta__form')){
-  validateForms('.cta__form', ctaRules, checks1, afterForm);
+const modalContent = document.querySelector('.modal__content')
+const ctaContent = document.querySelector('.cta__body')
+
+function renderThanks(container) {
+  const send = document.createElement('div')
+  const text = document.createElement('p')
+  const successIcon = document.createElement('img')
+  successIcon.src = './img/check-icon.svg'
+  successIcon.classList.add('success-icon')
+
+  send.classList.add('modal__title')
+  send.textContent = "Ваша заявка отправлена"
+
+  text.classList.add('modal__desc')
+  text.innerHTML = 'Спасибо за ваше обращение!<br>Ожидайте звонка от нашего специалиста в ближайшее время.'
+
+  container.innerHTML = ''
+  container.append(successIcon)
+  container.append(send)
+  container.append(text)
 }
 
-if(document.querySelector('.modal__form')){
-  validateForms('.modal__form', modalRules, checks2, afterForm);
+
+
+if(ctaForm){
+  validateForms('.cta__form', ctaRules, checks1, () => renderThanks(ctaContent));
+}
+
+if(modalForm){
+  validateForms('.modal__form', modalRules, checks2, () => renderThanks(modalContent));
 }

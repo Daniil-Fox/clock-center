@@ -5,6 +5,12 @@
     padding: 0;
   }
 
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   &__title {
     margin: 0;
     margin-bottom: 50px;
@@ -22,6 +28,8 @@
   }
 
   &__img {
+    display: block;
+
     img {
       width: 100%;
       height: auto;

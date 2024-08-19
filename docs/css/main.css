@@ -120,6 +120,11 @@ a {
 
 .site-container {
   overflow: hidden;
+  font-style: normal;
+}
+
+address {
+  font-style: normal;
 }
 
 .is-hidden {
@@ -245,6 +250,18 @@ a {
 
 .just-validate-error-label {
   display: none !important;
+}
+
+.success-icon {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.success-icon img {
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -408,8 +425,8 @@ a {
   opacity: 0;
   height: 1px;
   background-color: currentColor;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
+  -webkit-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
 }
 @media (any-hover: hover) {
   .header__tel:hover::after {
@@ -441,7 +458,7 @@ a {
 }
 .header__bottom {
   position: relative;
-  z-index: 2;
+  z-index: 12;
 }
 @media (max-width: 900px) {
   .header__bottom {
@@ -455,11 +472,6 @@ a {
 .header.h-active::after {
   z-index: 1;
   opacity: 1;
-}
-.header.h-active .h-menu {
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
 }
 
 .nav {
@@ -494,6 +506,9 @@ a {
     gap: 13px;
   }
 }
+.nav__left {
+  gap: 0;
+}
 .nav__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -502,6 +517,18 @@ a {
   -ms-flex-align: center;
   align-items: center;
   gap: 12px;
+  position: relative;
+}
+.nav__item:not(:last-child) {
+  padding-right: 20px;
+}
+@media (max-width: 1000px) {
+  .nav__item:not(:last-child) {
+    padding-right: 13px;
+  }
+}
+.nav__item--drop {
+  cursor: pointer;
 }
 @media (max-width: 1000px) {
   .nav__item {
@@ -736,6 +763,16 @@ a {
     padding: 0;
   }
 }
+.estimate__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
 .estimate__title {
   margin: 0;
   margin-bottom: 50px;
@@ -751,6 +788,9 @@ a {
   .estimate__title {
     margin-bottom: 30px;
   }
+}
+.estimate__img {
+  display: block;
 }
 .estimate__img img {
   width: 100%;
@@ -1230,9 +1270,19 @@ a {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 576px) {
+  .cta__container {
+    padding: 10px;
+  }
+}
 .cta__body {
   padding: 50px;
   border: 1px solid #fff;
+}
+@media (max-width: 576px) {
+  .cta__body {
+    padding: 10px;
+  }
 }
 .cta__title {
   margin-bottom: 40px;
@@ -1240,6 +1290,11 @@ a {
 @media (max-width: 850px) {
   .cta__title {
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .cta__title {
+    margin-bottom: 20px;
   }
 }
 .cta__desc {
@@ -1369,6 +1424,11 @@ a {
     padding: 12px;
   }
 }
+@media (max-width: 576px) {
+  .form-file {
+    font-size: 15px;
+  }
+}
 .form-file__btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1433,6 +1493,43 @@ input#agreement:checked + label[for=agreement] .form-check__box {
 
 input#agreement-m:checked + label[for=agreement-m] .form-check__box {
   background-color: #07285E;
+}
+
+.footer-nav__item {
+  text-align: center;
+}
+.footer-nav__item:not(:last-child) {
+  margin-bottom: 15px;
+}
+.footer-nav__link {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #fff;
+  font-style: normal;
+}
+
+a.footer-nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10%;
+  opacity: 0;
+  height: 1px;
+  background-color: currentColor;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+@media (any-hover: hover) {
+  a.footer-nav__link:hover::after {
+    opacity: 1;
+    width: 100%;
+  }
 }
 
 .footer {
@@ -1678,42 +1775,6 @@ input#agreement-m:checked + label[for=agreement-m] .form-check__box {
 @media (max-width: 850px) {
   .footer__text {
     display: none;
-  }
-}
-
-.footer-nav__item {
-  text-align: center;
-}
-.footer-nav__item:not(:last-child) {
-  margin-bottom: 15px;
-}
-.footer-nav__link {
-  position: relative;
-  margin: 0;
-  font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
-  text-align: center;
-  color: #fff;
-}
-
-a.footer-nav__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 10%;
-  opacity: 0;
-  height: 1px;
-  background-color: currentColor;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
-}
-@media (any-hover: hover) {
-  a.footer-nav__link:hover::after {
-    opacity: 1;
-    width: 100%;
   }
 }
 
@@ -2180,37 +2241,39 @@ a.footer-nav__link::after {
   width: 100%;
   z-index: 10;
   background-color: #fff;
-  -webkit-transform: translateY(-150%);
-  -ms-transform: translateY(-150%);
-  transform: translateY(-150%);
-  -webkit-transition: -webkit-transform 0.4s ease-out;
-  transition: -webkit-transform 0.4s ease-out;
-  transition: transform 0.4s ease-out;
-  transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  max-height: 0;
+  will-change: max-height;
+  -webkit-transition: max-height 0.4s ease-out;
+  transition: max-height 0.4s ease-out;
 }
 .h-menu__container {
   padding: 20px 35px;
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: (1fr)[15];
   grid-template-columns: repeat(15, 1fr);
   gap: 20px;
   position: relative;
   background-color: #fff;
 }
+.h-menu__container.active {
+  display: -ms-grid;
+  display: grid;
+}
 .h-menu__container::after {
   content: "";
   position: absolute;
   z-index: 1;
-  left: 70px;
+  left: var(--left-pos);
   top: 0;
-  width: 30px;
-  height: 30px;
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), to(transparent));
-  background-image: linear-gradient(90deg, #fff 50%, transparent);
-  -webkit-transform: rotate(45deg) translateY(-30%);
-  -ms-transform: rotate(45deg) translateY(-30%);
-  transform: rotate(45deg) translateY(-30%);
+  width: 0px;
+  height: 0px;
+  border: 15px solid transparent;
+  border-bottom: 15px solid #fff;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
 }
 .h-menu__title {
   margin-bottom: 30px;

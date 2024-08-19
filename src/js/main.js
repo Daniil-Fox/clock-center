@@ -1,27 +1,6 @@
 import './_components.js';
 
 
-const hMenu = document.querySelector('.h-menu')
-const hBody = document.querySelector('.h-menu>.container')
-const hMenuBtn = document.querySelector('.nav__arrow')
-const header = document.querySelector('.header')
-const headerBottom = document.querySelector('.header__bottom')
-
-hMenuBtn.addEventListener('click', e => {
-  e.preventDefault()
-
-  header.classList.toggle('h-active')
-})
-
-document.body.addEventListener('click', e => {
-  header.classList.remove('h-active')
-})
-hBody.addEventListener('click', e => {
-  e.stopPropagation()
-})
-headerBottom.addEventListener('click', e => {
-  e.stopPropagation()
-})
 
 
 

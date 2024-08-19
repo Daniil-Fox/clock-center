@@ -142,7 +142,7 @@
       opacity: 0;
       height: 1px;
       background-color: currentColor;
-      transition: .3s ease-out;
+      transition: .4s ease-out;
     }
 
     @include hover {
@@ -174,7 +174,7 @@
 
   &__bottom {
     position: relative;
-    z-index: 2;
+    z-index: 12;
 
     @media (max-width: 900px) {
       display: none;
@@ -189,9 +189,5 @@
   &::after {
     z-index: 1;
     opacity: 1;
-  }
-
-  .h-menu {
-    transform: translateY(0);
   }
 }

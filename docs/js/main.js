@@ -5409,9 +5409,53 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/sliders.js */ "./src/js/components/sliders.js");
 /* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/menu.js */ "./src/js/components/menu.js");
 /* harmony import */ var _components_validate_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/validate.js */ "./src/js/components/validate.js");
+/* harmony import */ var _components_h_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/h-menu.js */ "./src/js/components/h-menu.js");
 
 
 
+
+
+/***/ }),
+
+/***/ "./src/js/components/h-menu.js":
+/*!*************************************!*\
+  !*** ./src/js/components/h-menu.js ***!
+  \*************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+const hMenu = document.querySelector('.h-menu');
+const hBody = document.querySelector('.h-menu>.container');
+const hMenuBtn = document.querySelectorAll('.nav__item--drop');
+const header = document.querySelector('.header');
+const headerBottom = document.querySelector('.header__bottom');
+hMenuBtn.forEach(btn => {
+  const dataset = btn.dataset.nav;
+  const content = hMenu.querySelector(`.h-menu__container[data-nav-content="${dataset}"]`);
+  btn.addEventListener('mouseenter', e => {
+    hMenu.style.setProperty('--left-pos', btn.offsetLeft - btn.clientWidth / 1.2 + 'px');
+    e.preventDefault();
+    content.classList.add('active');
+    hMenu.style.maxHeight = hMenu.scrollHeight + 'px';
+    header.classList.add('h-active');
+  });
+  btn.addEventListener('mouseleave', e => {
+    e.preventDefault();
+    hMenu.style.maxHeight = null;
+    header.classList.remove('h-active');
+    content.classList.remove('active');
+  });
+});
+document.body.addEventListener('click', e => {
+  header.classList.remove('h-active');
+});
+hBody.addEventListener('click', e => {
+  e.stopPropagation();
+});
+headerBottom.addEventListener('click', e => {
+  e.stopPropagation();
+});
 
 /***/ }),
 
@@ -6590,9 +6634,6 @@ const ctaRules = [{
 }, {
   ruleSelector: '#form-file',
   rules: [{
-    rule: 'minFilesCount',
-    value: 1
-  }, {
     rule: 'files',
     value: {
       files: {
@@ -6602,14 +6643,30 @@ const ctaRules = [{
     }
   }]
 }];
-const afterForm = () => {
-  alert('Спасибо за заявку! Свяжемся с вами в ближайшее время!');
-};
-if (document.querySelector('.cta__form')) {
-  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules, checks1, afterForm);
+const modalForm = document.querySelector('.modal__form');
+const ctaForm = document.querySelector('.cta__form');
+const modalContent = document.querySelector('.modal__content');
+const ctaContent = document.querySelector('.cta__body');
+function renderThanks(container) {
+  const send = document.createElement('div');
+  const text = document.createElement('p');
+  const successIcon = document.createElement('img');
+  successIcon.src = './img/check-icon.svg';
+  successIcon.classList.add('success-icon');
+  send.classList.add('modal__title');
+  send.textContent = "Ваша заявка отправлена";
+  text.classList.add('modal__desc');
+  text.innerHTML = 'Спасибо за ваше обращение!<br>Ожидайте звонка от нашего специалиста в ближайшее время.';
+  container.innerHTML = '';
+  container.append(successIcon);
+  container.append(send);
+  container.append(text);
 }
-if (document.querySelector('.modal__form')) {
-  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.modal__form', modalRules, checks2, afterForm);
+if (ctaForm) {
+  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules, checks1, () => renderThanks(ctaContent));
+}
+if (modalForm) {
+  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.modal__form', modalRules, checks2, () => renderThanks(modalContent));
 }
 
 /***/ }),
@@ -6643,7 +6700,7 @@ const validateForms = function (selector, rules) {
     return false;
   }
   if (telSelector) {
-    const inputMask = new _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"]('+7 (999) 999-99-99');
+    const inputMask = new _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"]('+9 (999) 999-99-99');
     inputMask.mask(telSelector);
     for (let item of rules) {
       if (item.tel) {
@@ -6651,7 +6708,7 @@ const validateForms = function (selector, rules) {
           rule: 'function',
           validator: function () {
             const phone = telSelector.inputmask.unmaskedvalue();
-            return phone.length === 10;
+            return phone.length === 11;
           },
           errorMessage: item.telError
         });
@@ -6766,24 +6823,6 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_components.js */ "./src/js/_components.js");
 
-const hMenu = document.querySelector('.h-menu');
-const hBody = document.querySelector('.h-menu>.container');
-const hMenuBtn = document.querySelector('.nav__arrow');
-const header = document.querySelector('.header');
-const headerBottom = document.querySelector('.header__bottom');
-hMenuBtn.addEventListener('click', e => {
-  e.preventDefault();
-  header.classList.toggle('h-active');
-});
-document.body.addEventListener('click', e => {
-  header.classList.remove('h-active');
-});
-hBody.addEventListener('click', e => {
-  e.stopPropagation();
-});
-headerBottom.addEventListener('click', e => {
-  e.stopPropagation();
-});
 const modal = document.querySelector('.modal');
 const modalBody = document.querySelector('.modal__body');
 const modalClose = document.querySelector('.modal__close');

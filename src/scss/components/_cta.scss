@@ -10,11 +10,18 @@
       margin-bottom: 40px;
     }
 
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__body {
     padding: 50px;
     border: 1px solid #fff;
+
+    @include mobile {
+      padding: 10px;
+    }
   }
 
   &__title {
@@ -22,6 +29,10 @@
 
     @media (max-width: 850px) {
       margin-bottom: 30px;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
