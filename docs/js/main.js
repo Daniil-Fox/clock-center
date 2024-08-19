@@ -6605,8 +6605,12 @@ const ctaRules = [{
 const afterForm = () => {
   alert('Спасибо за заявку! Свяжемся с вами в ближайшее время!');
 };
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules, checks1, afterForm);
-(0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.modal__form', modalRules, checks2, afterForm);
+if (document.querySelector('.cta__form')) {
+  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.cta__form', ctaRules, checks1, afterForm);
+}
+if (document.querySelector('.modal__form')) {
+  (0,_functions_validate_forms_js__WEBPACK_IMPORTED_MODULE_0__.validateForms)('.modal__form', modalRules, checks2, afterForm);
+}
 
 /***/ }),
 
@@ -6800,7 +6804,7 @@ modalClose.addEventListener('click', e => {
 const inputFile = document.querySelector('#form-file');
 const inputFileLabel = document.querySelector('.form-file>span');
 console.log(inputFileLabel);
-inputFile.addEventListener('change', e => {
+inputFile?.addEventListener('change', e => {
   if (inputFile.value == "") {
     inputFileLabel.textContent = "Прикрепить файлы...";
   } else {

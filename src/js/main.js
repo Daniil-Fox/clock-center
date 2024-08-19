@@ -53,7 +53,7 @@ modalClose.addEventListener('click', e => {
 const inputFile = document.querySelector('#form-file')
 const inputFileLabel = document.querySelector('.form-file>span')
 console.log(inputFileLabel)
-inputFile.addEventListener('change', e => {
+inputFile?.addEventListener('change', e => {
   if(inputFile.value == ""){
     inputFileLabel.textContent = "Прикрепить файлы..."
   } else {
