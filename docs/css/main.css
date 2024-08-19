@@ -1399,6 +1399,7 @@ a {
   margin: 0 auto;
 }
 .form-check__box {
+  display: block;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   width: 16px;
