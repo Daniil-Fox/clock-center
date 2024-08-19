@@ -23,7 +23,7 @@
     }
 
     @include mobile {
-      display: block;
+      grid-template-columns: 1fr;
     }
 
     p {

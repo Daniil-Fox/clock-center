@@ -1914,7 +1914,8 @@ a.footer-nav__link::after {
 }
 @media (max-width: 576px) {
   .about-comfort__descr {
-    display: block;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 576px) {
