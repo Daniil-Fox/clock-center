@@ -1,0 +1,124 @@
+.menu {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .3s ease-out, z-index .3s ease-out;
+  display: flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #efefef;
+    opacity: 0.9;
+  }
+
+
+
+  &__body {
+    position: relative;
+    width: auto;
+    height: 100%;
+    background-color: #fff;
+    padding: 130px;
+    padding-top: 190px;
+    transform: translateX(-100%);
+    transition: transform .3s ease-out;
+    overflow-x: auto;
+    scrollbar-width: thin;
+
+    @include mobile {
+      padding: 10px;
+      padding-top: 70px;
+      width: 100%;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 24px;
+    height: 24px;
+
+    @include mobile {
+      right: 10px;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__nav {
+    &:not(:last-child) {
+      margin-bottom: 150px;
+    }
+  }
+
+  &__block {
+    display: none;
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__g {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+.menu-nav {
+  &__list {
+    &:not(:last-child) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #000;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 10%;
+      opacity: 0;
+      height: 1px;
+      background-color: currentColor;
+      transition: .3s ease-out;
+    }
+
+    @include hover {
+      &::after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}

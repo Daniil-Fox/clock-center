@@ -1,0 +1,43 @@
+.footer-nav {
+  &__item {
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 133%;
+    text-align: center;
+    color: #fff;
+
+
+  }
+}
+
+a.footer-nav__link {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 10%;
+    opacity: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: .3s ease-out;
+  }
+
+  @include hover {
+    &::after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}

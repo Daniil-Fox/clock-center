@@ -1,28 +1,94 @@
 <header class="header">
-  <div class="container">
-    <div class="header__top">
+  <div class="header__top">
+    <div class="container header__container">
       <div class="header__burger">
         <div class="line"></div>
       </div>
 
       <a href="./" class="header__logo">
-        <img src="./img/logo.svg" alt="">
+        <img src="./img/logo.svg" alt="" />
       </a>
 
       <div class="header__right">
         <div class="header__g">
-          <a href="tel:+74950000000" class="header__tel">+7 (495) 000-00-00</a>
-          <span class="recall header__link"><a href="#">Заказать обратный звонок</a></span>
+          <div>
+            <a href="tel:+74950000000" class="header__tel"
+              >+7 (495) 000-00-00</a
+            >
+          </div>
+          <span class="recall header__link"
+            ><a href="#" class="modal-btn">Заказать обратный звонок</a></span
+          >
         </div>
         <div class="header__g">
-          <a href="tel:+79037240444" class="header__tel">+7 (903) 724-04-44</a>
+          <div>
+            <a href="tel:+79037240444" class="header__tel"
+              >+7 (903) 724-04-44</a
+            >
+          </div>
           <span class="recall header__link">
-            <a href="#">Whatsapp</a>
+            <a href="#" target="_blank">Whatsapp</a>
             •
-            <a href="#">Telegram</a>
+            <a href="#" target="_blank">Telegram</a>
           </span>
         </div>
       </div>
     </div>
   </div>
+  <nav class="header__bottom nav">
+    <div class="container">
+      <div class="nav__container">
+        <ul class="nav__left list-reset">
+          <li class="nav__item">
+            <div class="nav__icon">
+              <img src="./img/icons/clock.svg" alt="" />
+            </div>
+            <a href="#" class="nav__link">Швейцарские часы</a>
+            <div class="nav__arrow">
+              <svg
+                width="7"
+                height="5"
+                viewBox="0 0 7 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M6.15775 0.150122L3.50775 2.844L0.85775 0.150122C0.66075 -0.0498779 0.34375 -0.0498779 0.14775 0.150122C-0.04925 0.350122 -0.04925 0.674612 0.14775 0.874612L3.14775 3.93584C3.34175 4.13584 3.65775 4.13686 3.85475 3.9389L3.85775 3.93584L6.85675 0.874612C7.05375 0.674612 7.05375 0.350122 6.85675 0.150122C6.66175 -0.0498779 6.34375 -0.0498779 6.14675 0.150122H6.15775Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </li>
+          <li class="nav__item">
+            <div class="nav__icon">
+              <img src="./img/icons/rings.svg" alt="" />
+            </div>
+            <a href="#" class="nav__link">Ювелирные изделия</a>
+          </li>
+          <li class="nav__item">
+            <div class="nav__icon">
+              <img src="./img/icons/bag.svg" alt="" />
+            </div>
+            <a href="#" class="nav__link">Аксессуары</a>
+          </li>
+        </ul>
+
+        <ul class="list-reset nav__right">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Скупка часов</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Скупка бриллиантов</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Экспертиза часов</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    @include('./h-menu.html')
+  </nav>
 </header>

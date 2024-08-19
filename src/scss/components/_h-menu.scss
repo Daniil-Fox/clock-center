@@ -1,0 +1,100 @@
+.h-menu {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+
+
+  transform: translateY(-150%);
+  transition: transform .4s ease-out;
+
+  &__container {
+    padding: 20px 35px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 20px;
+    position: relative;
+    background-color: #fff;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      left: 70px;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      background-image: linear-gradient(90deg, #fff 50%, transparent);
+      // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+      transform: rotate(45deg) translateY(-30%);
+    }
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.11em;
+    color: #194ca0;
+  }
+
+  &__left {
+    grid-column: 8 span;
+  }
+
+  &__img {
+    grid-column: 10 / 6 span;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+
+.h-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+
+  &__link {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 186%;
+    color: #000;
+
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 10%;
+      opacity: 0;
+      height: 1px;
+      background-color: currentColor;
+      transition: .3s ease-out;
+    }
+
+    @include hover {
+      &::after {
+        opacity: 1;
+        width: 100%;
+      }
+    }
+  }
+}

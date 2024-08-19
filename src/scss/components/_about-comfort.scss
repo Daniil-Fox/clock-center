@@ -1,0 +1,37 @@
+.about-comfort {
+  margin-bottom: 100px;
+
+  @media (max-width: 850px) {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (max-width: 850px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__descr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+
+    @media (max-width: 1000px) {
+      gap: 30px;
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+    p {
+      &:last-child {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+<div class="modal">
+  <div class="modal__body">
+    <div class="modal__close">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.369174 23.6308C0.461482 23.7231 0.599944 23.7692 0.692251 23.7692C0.784559 23.7692 0.923021 23.7231 1.01533 23.6308L11.9999 12.6462L22.9846 23.6308C23.0769 23.7231 23.2153 23.7692 23.3076 23.7692C23.3999 23.7692 23.5384 23.7231 23.6307 23.6308C23.8153 23.4462 23.8153 23.1692 23.6307 22.9846L12.6461 12L23.6307 1.01539C23.8153 0.830774 23.8153 0.553851 23.6307 0.369235C23.4461 0.18462 23.1692 0.18462 22.9846 0.369235L11.9999 11.3539L1.01533 0.369235C0.830713 0.18462 0.55379 0.18462 0.369174 0.369235C0.184559 0.553851 0.184559 0.830774 0.369174 1.01539L11.3538 12L0.369174 22.9846C0.184559 23.1692 0.184559 23.4462 0.369174 23.6308Z"
+          fill="black"
+        />
+      </svg>
+    </div>
+    <div class="modal__content">
+      <h4 class="modal__title">Заказать обратный звонок</h4>
+      <p class="modal__desc">
+        Оставьте ваш номер телефона и наш менеджер перезвонит вам для бесплатной
+        консультации.
+      </p>
+
+      <form action="#" class="modal__form form">
+        <label class="form__label">
+          <span class="form__capture">Ваше имя:</span>
+          <input
+            type="text"
+            class="form__input input-name"
+            name="Имя:"
+            placeholder="Дмитрий Потапенко"
+          />
+        </label>
+        <label class="form__label">
+          <span class="form__capture">Ваш телефон:</span>
+          <input
+            type="tel"
+            class="form__input input-tel"
+            name="Телефон:"
+            placeholder="+7 (495) 000-00-00"
+          />
+        </label>
+
+        <div class="checks-group">
+          <input
+            type="checkbox"
+            id="agreement-m"
+            class="visually-hidden input-check"
+          />
+          <label for="agreement-m" class="form-check form__check form__label">
+            <div class="form-check__box"></div>
+            <span class="form-check__text">
+              Я согласен с политикой конфиденциальности и пользовательским
+              соглашением
+            </span>
+          </label>
+        </div>
+
+        <button class="btn-reset form__btn">ОТПРАВИТЬ НА ОЦЕНКУ</button>
+      </form>
+    </div>
+  </div>
+</div>
