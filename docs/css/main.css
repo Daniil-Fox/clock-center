@@ -531,6 +531,12 @@ address {
 .nav__item--drop {
   cursor: pointer;
 }
+@media (any-hover: hover) {
+  .nav__item--drop:hover .nav__link::after {
+    opacity: 1;
+    width: 100%;
+  }
+}
 @media (max-width: 1000px) {
   .nav__item {
     gap: 10px;
