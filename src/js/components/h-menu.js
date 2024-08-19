@@ -11,7 +11,7 @@ hMenuBtn.forEach(btn => {
   const dataset = btn.dataset.nav
   const content = hMenu.querySelector(`.h-menu__container[data-nav-content="${dataset}"]`)
   btn.addEventListener('mouseenter', e => {
-    hMenu.style.setProperty('--left-pos', (btn.offsetLeft - btn.clientWidth / 1.2) + 'px')
+    hMenu.style.setProperty('--left-pos', (btn.offsetLeft + btn.clientWidth/2) + 'px')
     e.preventDefault()
 
     content.classList.add('active')
@@ -37,3 +37,5 @@ hBody.addEventListener('click', e => {
 headerBottom.addEventListener('click', e => {
   e.stopPropagation()
 })
+
+

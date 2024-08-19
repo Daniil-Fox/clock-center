@@ -491,6 +491,7 @@ address {
   justify-content: space-between;
   padding: 12px 0;
   gap: 40px;
+  position: relative;
 }
 .nav__left, .nav__right {
   display: -webkit-box;

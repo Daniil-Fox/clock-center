@@ -5434,7 +5434,7 @@ hMenuBtn.forEach(btn => {
   const dataset = btn.dataset.nav;
   const content = hMenu.querySelector(`.h-menu__container[data-nav-content="${dataset}"]`);
   btn.addEventListener('mouseenter', e => {
-    hMenu.style.setProperty('--left-pos', btn.offsetLeft - btn.clientWidth / 1.2 + 'px');
+    hMenu.style.setProperty('--left-pos', btn.offsetLeft + btn.clientWidth / 2 + 'px');
     e.preventDefault();
     content.classList.add('active');
     hMenu.style.maxHeight = hMenu.scrollHeight + 'px';
@@ -6686,6 +6686,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/inputmask/dist/inputmask.es6.js */ "./node_modules/inputmask/dist/inputmask.es6.js");
 
 
+const inputName = document.querySelectorAll('.input-name');
+if (inputName.length > 0) {
+  inputName.forEach(el => {
+    console.log(el);
+    const inputMask = new _node_modules_inputmask_dist_inputmask_es6_js__WEBPACK_IMPORTED_MODULE_1__["default"]('aA{3,20}');
+    inputMask.mask(el);
+  });
+}
 const validateForms = function (selector, rules) {
   let checkboxes = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : [];
   let afterSend = arguments.length > 3 ? arguments[3] : undefined;

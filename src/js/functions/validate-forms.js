@@ -1,6 +1,19 @@
 import JustValidate from 'just-validate';
 import Inputmask from "../../../node_modules/inputmask/dist/inputmask.es6.js";
 
+
+
+const inputName = document.querySelectorAll('.input-name')
+
+if(inputName.length > 0){
+  inputName.forEach(el => {
+    console.log(el)
+    const inputMask = new Inputmask('aA{3,20}');
+    inputMask.mask(el);
+  })
+}
+
+
 export const validateForms = (selector, rules, checkboxes = [], afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
