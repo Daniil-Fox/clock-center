@@ -2250,8 +2250,6 @@ a.footer-nav__link::after {
   background-color: #fff;
   max-height: 0;
   will-change: max-height;
-  -webkit-transition: max-height 0.4s ease-out;
-  transition: max-height 0.4s ease-out;
 }
 .h-menu__container {
   padding: 20px 35px;
