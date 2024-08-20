@@ -6566,8 +6566,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _owl_carousel_min_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./owl-carousel.min.js */ "./src/js/components/owl-carousel.min.js");
 
 $(document).ready(function () {
-  $('.owl-carousel').owlCarousel({
-    autoplay: true,
+  $(".owl-carousel").owlCarousel({
+    // autoplay: true,
     autoplayTimeout: 4000,
     autoplaySpeed: 500,
     items: 3,

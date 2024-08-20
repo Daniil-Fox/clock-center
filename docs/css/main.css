@@ -952,6 +952,15 @@ address {
   margin-top: 100px;
   margin-bottom: 80px;
 }
+.info--sec {
+  margin-bottom: 28px;
+}
+@media (max-width: 850px) {
+  .info--sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 850px) {
   .info {
     margin-top: 30px;
@@ -1171,6 +1180,14 @@ address {
 
 .benefits {
   padding: 43px 0;
+}
+.benefits--sec {
+  padding-bottom: 75px;
+}
+@media (max-width: 1000px) {
+  .benefits--sec {
+    padding: 30px 0;
+  }
 }
 @media (max-width: 1000px) {
   .benefits {
@@ -1903,7 +1920,7 @@ a.footer-nav__link::after {
 }
 
 .about-hero {
-  padding: 50px 0 70px;
+  padding: 45px 0 0px;
 }
 @media (max-width: 1024px) {
   .about-hero {
@@ -1913,9 +1930,9 @@ a.footer-nav__link::after {
 .about-hero__link {
   position: absolute;
   z-index: 10;
-  right: 120px;
-  bottom: 30px;
-  padding: 20px;
+  right: 111px;
+  bottom: 101px;
+  padding: 20px 20px;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1923,14 +1940,18 @@ a.footer-nav__link::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 10px;
+  gap: 13px;
+}
+.about-hero__link--sec {
+  right: 6px;
+  bottom: 55px;
 }
 .about-hero__link span {
-  font-family: var(--font3);
-  font-weight: 400;
+  font-family: var(--font2);
+  font-weight: 300;
   font-size: 14px;
   line-height: 129%;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.17em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1956,7 +1977,7 @@ a.footer-nav__link::after {
 }
 .about-hero__title {
   font-size: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 @media (max-width: 1024px) {
   .about-hero__title {
@@ -1978,7 +1999,8 @@ a.footer-nav__link::after {
   position: relative;
 }
 .about-hero__items .owl-stage {
-  padding: 10% 0;
+  padding: 17% 0;
+  padding-bottom: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2016,9 +2038,9 @@ a.footer-nav__link::after {
 .about-hero__items .owl-item.active.center {
   position: relative;
   z-index: 4;
-  -webkit-transform: scale(2.6, 2);
-  -ms-transform: scale(2.6, 2);
-  transform: scale(2.6, 2);
+  -webkit-transform: scale(2.6, 2.2);
+  -ms-transform: scale(2.6, 2.2);
+  transform: scale(2.6, 2.2);
   aspect-ratio: 1020/580;
 }
 @media (max-width: 768px) {
@@ -2070,15 +2092,17 @@ a.footer-nav__link::after {
 }
 
 .about-comfort {
+  margin-top: -5px;
   margin-bottom: 100px;
 }
 @media (max-width: 850px) {
   .about-comfort {
+    margin-top: 0;
     margin-bottom: 10px;
   }
 }
 .about-comfort__title {
-  margin-bottom: 40px;
+  margin-bottom: 47px;
 }
 @media (max-width: 850px) {
   .about-comfort__title {
@@ -2110,7 +2134,8 @@ a.footer-nav__link::after {
 }
 
 .contacts-hero {
-  padding: 50px 0;
+  padding: 14px 0;
+  padding-top: 42px;
 }
 @media (max-width: 850px) {
   .contacts-hero {
@@ -2119,7 +2144,7 @@ a.footer-nav__link::after {
 }
 .contacts-hero__title {
   font-size: 64px;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 @media (max-width: 1024px) {
   .contacts-hero__title {
@@ -2179,7 +2204,7 @@ a.footer-nav__link::after {
   }
 }
 .contacts-about__body {
-  padding: 30px 20px;
+  padding: 35px 20px;
   border: 1px solid #e9e9e9;
 }
 @media (max-width: 768px) {
@@ -2189,10 +2214,13 @@ a.footer-nav__link::after {
   }
 }
 .contacts-about__title {
+  margin-bottom: 11px;
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 30px;
   color: #000;
+  line-height: 1;
+  letter-spacing: 0.035em;
 }
 .contacts-about__timetable {
   font-family: var(--second-family);
@@ -2203,6 +2231,9 @@ a.footer-nav__link::after {
   color: #000;
 }
 .contacts-about__block:not(:last-child) {
+  margin-bottom: 29px;
+}
+.contacts-about__block:first-child {
   margin-bottom: 20px;
 }
 .contacts-about__block span {
@@ -2213,8 +2244,12 @@ a.footer-nav__link::after {
   text-transform: uppercase;
   color: #000;
 }
+.contacts-about__desc {
+  font-weight: 300;
+  letter-spacing: -0.005em;
+}
 .contacts-about__desc:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 7px;
 }
 .contacts-about__link {
   font-family: var(--second-family);
@@ -2231,8 +2266,8 @@ a.footer-nav__link::after {
 }
 .contacts-about__tel {
   display: block;
-  font-family: var(--font-family);
-  font-weight: 500;
+  font-family: var(--font5);
+  font-weight: 400;
   font-size: 22px;
   line-height: 136%;
   color: #000;
@@ -2240,7 +2275,7 @@ a.footer-nav__link::after {
 }
 
 .contacts-gallery {
-  margin-bottom: 80px;
+  margin-bottom: 7px;
 }
 
 .menu {
