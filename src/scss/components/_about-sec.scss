@@ -1,5 +1,5 @@
 .about-sec {
-  padding: 50px 0;
+  padding-top: 25px;
   padding-bottom: 80px;
 
   @media (max-width: 1000px) {
@@ -20,8 +20,8 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(15, 1fr);
+    gap: 16px;
 
     @media (max-width: 850px) {
       grid-template-columns: 1fr;
@@ -29,9 +29,12 @@
   }
 
   &__left {
+    grid-column: 7 span;
     padding-bottom: 40px;
+    padding-top: 7px;
 
     @media (max-width: 850px) {
+      grid-column: 1 span;
       padding: 0;
     }
   }
@@ -39,8 +42,10 @@
   &__right {
     position: relative;
     z-index: 1;
+    grid-column: 8 span;
 
     @media (max-width: 850px) {
+      grid-column: 1 span;
       height: 400px;
     }
 
@@ -55,15 +60,15 @@
     z-index: 2;
     left: 0;
     top: 0;
-    width: 100%;
+    width: 101%;
     height: 100%;
 
 
     &--back {
       width: 380px;
       height: 260px;
-      top: 48px;
-      right: -54px;
+      top: 53px;
+      right: -59px;
       left: unset;
       z-index: 1;
 

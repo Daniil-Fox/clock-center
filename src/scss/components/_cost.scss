@@ -1,5 +1,5 @@
 .cost {
-  padding: 60px 0 50px;
+  padding: 53px 0 50px;
 
   @media (max-width: 850px) {
     padding: 0;
@@ -23,7 +23,7 @@
   }
 
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 
   &__subtitle {
@@ -48,7 +48,7 @@
 
   &__img {
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
     width: 437px;
     height: 437px;
     border-radius: 100%;
@@ -73,9 +73,10 @@
   }
 
   &__desc {
-    max-width: 1020px;
+    max-width: 1021px;
     margin: 0 auto;
     text-align: center;
+    font-weight: 300;
 
     @media (max-width: 1200px) {
       max-width: 85%;

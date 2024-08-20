@@ -7,11 +7,18 @@
     }
   }
 
+  &__design {
+    padding-right: 22px;
+    display: inline-block;
+    text-align: center;
+
+  }
+
   &__link {
     position: relative;
     margin: 0;
-    font-family: var(--font-family);
-    font-weight: 500;
+    font-family: var(--font4);
+    font-weight: 400;
     font-size: 18px;
     line-height: 133%;
     text-align: center;
