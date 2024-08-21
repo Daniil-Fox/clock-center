@@ -30,6 +30,8 @@
   &__icon {
     height: 36px;
     padding-top: 2px;
+    display: flex;
+    align-items: center;
 
     img {
       object-fit: contain;
