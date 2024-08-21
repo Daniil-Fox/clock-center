@@ -1,5 +1,6 @@
 import './_components.js';
 
+import { Fancybox } from "@fancyapps/ui";
 
 
 
@@ -45,7 +46,7 @@ inputFile?.addEventListener('change', e => {
   }
 })
 
-addedFilesContainer.addEventListener('click', e => {
+addedFilesContainer?.addEventListener('click', e => {
   if(e.target.classList.contains('added-files__times')){
     const parent = e.target.closest('li');
     const name = parent.querySelector('span').textContent;
@@ -76,9 +77,6 @@ function createAddedFile(file){
   const liCont = document.createElement('li')
   liCont.dataset.id = file.name
 
-  // const imgCont = document.createElement('img')
-  // imgCont.src = file.src;
-
   const nameCont = document.createElement('span')
   nameCont.textContent = file.name;
 
@@ -86,10 +84,13 @@ function createAddedFile(file){
   closeBtn.classList.add('added-files__times')
   closeBtn.innerHTML = '&times;'
 
-  // liCont.append(imgCont)
   liCont.append(nameCont)
   liCont.append(closeBtn)
 
 
   return liCont;
 }
+
+
+Fancybox.bind('[data-fancybox="main"]', {});
+Fancybox.bind('[data-fancybox="about"]', {});
