@@ -75,7 +75,7 @@
 .h-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
+  gap: 12%;
 
   &__link {
     font-family: var(--third-family);

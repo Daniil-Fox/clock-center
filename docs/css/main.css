@@ -2615,7 +2615,7 @@ a.footer-nav__link::after {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
+  gap: 12%;
 }
 .h-nav__link {
   font-family: var(--third-family);
