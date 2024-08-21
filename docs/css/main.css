@@ -53,6 +53,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "GaramondPremrProMed";
+  src: url("../fonts/../fonts/Garamond-Premier-Pro-Medium-Subhead.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Sans Regular";
   src: url("../fonts/../fonts/sansregular.woff2") format("woff2");
   font-weight: 400;
@@ -1143,8 +1150,8 @@ address {
 }
 .info-item span {
   display: block;
-  font-family: var(--font-family);
-  font-weight: 500;
+  font-family: "GaramondPremrProMed";
+  font-weight: 400;
   font-size: 144px;
   color: #fff;
   line-height: 0.7;
