@@ -53,7 +53,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "GaramondPremrProMed";
+  font-family: "GaramondPremrProMedSubh";
   src: url("../fonts/../fonts/Garamond-Premier-Pro-Medium-Subhead.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
@@ -1150,7 +1150,7 @@ address {
 }
 .info-item span {
   display: block;
-  font-family: "GaramondPremrProMed";
+  font-family: "GaramondPremrProMedSubh";
   font-weight: 400;
   font-size: 144px;
   color: #fff;
