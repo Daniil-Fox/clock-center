@@ -49,36 +49,34 @@
     cursor: pointer;
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 36px;
     height: 19px;
-    overflow: hidden;
+    // overflow: hidden;
     margin-bottom: 10px;
+
+    @media (max-width: 900px) {
+      margin: 0;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: static;
+      flex-shrink: 0;
+      display: block;
+      background-color: #000;
+      width: 100%;
+      height: 2px;
+    }
 
     .line {
       background-color: #000;
       width: 100%;
       height: 2px;
       flex-shrink: 0;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        background-color: #000;
-        left: 0;
-        width: 100%;
-        height: 1.8px;
-      }
-
-      &::before {
-        top: 0;
-      }
-
-      &::after {
-        bottom: 0;
-      }
     }
   }
 
