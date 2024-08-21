@@ -60,6 +60,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "GaramondPremierProCaption";
+  src: url("../fonts/../fonts/Garamond-Premier-Pro-Caption.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Sans Regular";
   src: url("../fonts/../fonts/sansregular.woff2") format("woff2");
   font-weight: 400;
@@ -1154,13 +1161,26 @@ address {
   letter-spacing: 0.05em;
 }
 .info-item span {
-  display: block;
-  font-family: "GaramondPremrProMedSubh";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  font-family: "GaramondPremierProCaption";
   font-weight: 400;
   font-size: 144px;
   color: #fff;
   line-height: 0.7;
   letter-spacing: 0.01em;
+}
+.info-item span span {
+  font-size: 99px;
+}
+@media (max-width: 1024px) {
+  .info-item span span {
+    font-size: 55px;
+  }
 }
 @media (max-width: 1024px) {
   .info-item span {

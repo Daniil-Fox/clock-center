@@ -128,13 +128,22 @@
   }
 
   span {
-    display: block;
-    font-family: 'GaramondPremrProMedSubh';
+    display: flex;
+    align-items: flex-end;
+    font-family: 'GaramondPremierProCaption';
     font-weight: 400;
     font-size: 144px;
     color: #fff;
     line-height: 0.7;
     letter-spacing: 0.01em;
+
+    span {
+      font-size: 99px;
+
+      @media (max-width: 1024px) {
+        font-size: 55px;
+      }
+    }
 
     @media (max-width: 1024px) {
       font-size: 100px;
