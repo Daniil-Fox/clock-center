@@ -1,6 +1,6 @@
 import './_components.js';
 
-import { Fancybox } from "@fancyapps/ui";
+import { Fancybox } from "./../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.esm.js";
 
 
 
