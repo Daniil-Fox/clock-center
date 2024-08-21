@@ -18,6 +18,10 @@
     }
   }
 
+  &__desc {
+    font-weight: 300;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(15, 1fr);

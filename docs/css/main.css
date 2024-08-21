@@ -162,6 +162,8 @@
   min-width: 360px;
   min-height: 100%;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
@@ -945,6 +947,9 @@ address {
   .about-sec__title {
     margin-bottom: 23px;
   }
+}
+.about-sec__desc {
+  font-weight: 300;
 }
 .about-sec__container {
   display: -ms-grid;
