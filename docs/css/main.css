@@ -39,8 +39,29 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "GaramondPremrPro";
+  src: url("../fonts/../fonts/Garamond-Premier-Pro-Subhead.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GaramondPremrPro";
+  src: url("../fonts/../fonts/GaramondPremrPro-LtDisp.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Sans Regular";
+  src: url("../fonts/../fonts/sansregular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Gotham Pro";
-  src: url("../fonts/../fonts/Gotham-Pro-Light.woff2") format("woff2");
+  src: url("../fonts/../fonts/GothamPro-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
@@ -225,11 +246,10 @@ address {
 .title2 {
   margin: 0;
   font-family: var(--font-family);
-  font-weight: 500;
+  font-weight: 400;
   font-size: 48px;
   text-align: center;
   color: #000;
-  letter-spacing: 0.04em;
 }
 @media (max-width: 1024px) {
   .title2 {
@@ -292,6 +312,16 @@ address {
 .success-icon img {
   width: 100%;
   height: 100%;
+}
+
+.added-files li {
+  padding: 10px;
+  background-color: #fff;
+}
+.added-files li img {
+  display: block;
+  width: 40px;
+  height: 20px;
 }
 
 .header {
@@ -694,18 +724,18 @@ address {
 .hero__content {
   position: relative;
   z-index: 4;
-  max-width: 700px;
+  max-width: 710px;
   margin: 0 auto;
 }
 .hero__title {
   margin: 0;
   margin-bottom: 54px;
   font-family: var(--font-family);
-  font-weight: 500;
+  font-weight: 300;
   font-size: 64px;
   text-align: center;
   color: #fff;
-  letter-spacing: 0.038em;
+  letter-spacing: 0.046em;
   line-height: 1;
 }
 @media (max-width: 1000px) {
@@ -794,11 +824,12 @@ address {
   object-fit: contain;
 }
 .hero-item__capture {
-  font-family: var(--font5);
-  font-weight: 400;
+  font-family: var(--second-family);
+  font-weight: 300;
   font-size: 24px;
   text-align: center;
   color: #fff;
+  letter-spacing: -0.02em;
 }
 @media (max-width: 850px) {
   .hero-item__capture {
@@ -993,11 +1024,12 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  gap: 137px;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  gap: 20px;
   margin-bottom: 58px;
+  margin-right: -23px;
 }
 @media (max-width: 1000px) {
   .info__items {
@@ -1016,6 +1048,7 @@ address {
   position: relative;
   max-width: 700px;
   margin: 0 auto;
+  font-family: var(--second-family);
   font-weight: 300;
 }
 @media (max-width: 850px) {
@@ -1043,12 +1076,20 @@ address {
 
 .info-item {
   font-family: var(--font-family);
-  font-weight: 500;
+  font-weight: 300;
   font-size: 36px;
   line-height: 94%;
   color: #fff;
   width: 100%;
-  max-width: 184px;
+}
+.info-item:nth-child(1) {
+  max-width: 300px;
+}
+.info-item:nth-child(1) div {
+  padding-left: 16px;
+}
+.info-item:nth-child(2) {
+  max-width: 375px;
 }
 @media (max-width: 850px) {
   .info-item {
@@ -1065,6 +1106,10 @@ address {
     font-size: 20px;
   }
 }
+.info-item div {
+  padding-left: 5px;
+  letter-spacing: 0.05em;
+}
 .info-item span {
   display: block;
   font-family: var(--font-family);
@@ -1072,7 +1117,7 @@ address {
   font-size: 144px;
   color: #fff;
   line-height: 0.7;
-  letter-spacing: 0.058em;
+  letter-spacing: 0.01em;
 }
 @media (max-width: 1024px) {
   .info-item span {
@@ -1318,8 +1363,8 @@ address {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  font-family: var(--font-family);
-  font-weight: 500;
+  font-family: var(--font3);
+  font-weight: 400;
   font-size: 180px;
   color: #e9e9e9;
 }
@@ -1612,10 +1657,11 @@ input#agreement-m:checked + label[for=agreement-m] .form-check__box {
 .footer-nav__link {
   position: relative;
   margin: 0;
-  font-family: var(--font4);
-  font-weight: 400;
+  font-family: var(--second-family);
+  font-weight: 300;
   font-size: 18px;
   line-height: 133%;
+  letter-spacing: -0.035em;
   text-align: center;
   color: #fff;
   font-style: normal;
@@ -1765,10 +1811,10 @@ a.footer-nav__link::after {
 .footer__email {
   display: block;
   text-align: center;
-  font-family: var(--font3);
-  font-weight: 500;
+  font-family: var(--second-family);
+  font-weight: 300;
   font-size: 10px;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: #fff;
 }
@@ -1801,6 +1847,7 @@ a.footer-nav__link::after {
   grid-column: 5 span !important;
 }
 .footer__btn {
+  height: 56px;
   position: relative;
   z-index: 1;
   padding: 20px 25px;
@@ -1815,7 +1862,7 @@ a.footer-nav__link::after {
   -ms-flex-pack: center;
   justify-content: center;
   font-family: var(--second-family);
-  font-weight: 400;
+  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;

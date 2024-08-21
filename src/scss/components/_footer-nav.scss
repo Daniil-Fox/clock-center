@@ -17,10 +17,11 @@
   &__link {
     position: relative;
     margin: 0;
-    font-family: var(--font4);
-    font-weight: 400;
+    font-family: var(--second-family);
+    font-weight: 300;
     font-size: 18px;
     line-height: 133%;
+    letter-spacing: -0.035em;
     text-align: center;
     color: #fff;
     font-style: normal;
