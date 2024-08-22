@@ -2615,7 +2615,12 @@ a.footer-nav__link::after {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 12%;
+  gap: 7%;
+}
+@media (max-width: 1200px) {
+  .h-nav {
+    gap: 5%;
+  }
 }
 .h-nav__link {
   font-family: var(--third-family);
@@ -2625,6 +2630,7 @@ a.footer-nav__link::after {
   color: #000;
   display: inline-block;
   position: relative;
+  white-space: nowrap;
 }
 .h-nav__link::after {
   content: "";

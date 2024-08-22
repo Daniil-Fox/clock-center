@@ -75,7 +75,11 @@
 .h-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12%;
+  gap: 7%;
+
+  @media (max-width: 1200px) {
+    gap: 5%;
+  }
 
   &__link {
     font-family: var(--third-family);
@@ -86,6 +90,7 @@
 
     display: inline-block;
     position: relative;
+    white-space: nowrap;
 
     &::after {
       content: "";
